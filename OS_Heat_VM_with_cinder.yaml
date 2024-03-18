@@ -54,6 +54,7 @@ resources:
         chpasswd: { expire: False }
         ssh_pwauth: True
 
+
   my_vol:
     type: OS::Cinder::Volume
     properties:
