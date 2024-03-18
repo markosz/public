@@ -48,8 +48,13 @@ resources:
       image: { get_param: image }
       flavor: { get_param: flavor }
       networks: [{network: {get_param: network} }]
-      user_data: |
-        #cloud-config
+      user_data:
+        get_resource: cloud_conf
+
+  cloud_conf:
+    type: OS::Heat::CloudConfig
+    properties:
+      cloud_config:
         password: stack
         chpasswd: { expire: False }
         ssh_pwauth: True
