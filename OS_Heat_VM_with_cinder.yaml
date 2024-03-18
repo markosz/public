@@ -34,7 +34,7 @@ parameters:
   network:
     type: string
     description: The network for the VM
-    default: private
+    default: tun0-net
   vol_size:
     type: number
     description: The size of the Cinder volume
