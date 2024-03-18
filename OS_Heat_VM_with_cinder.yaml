@@ -48,17 +48,10 @@ resources:
       image: { get_param: image }
       flavor: { get_param: flavor }
       networks: [{network: {get_param: network} }]
-      user_data:
-        get_resource: cloud_conf
-
-  cloud_conf:
-    type: OS::Heat::CloudConfig
-    properties:
-      cloud_config:
+      user_data: |
         password:stack
-        chpasswd:{expire:False}
-        ssh_pwauth:True
-
+        chpasswd: { expire: False }
+        ssh_pwauth: True
 
   my_vol:
     type: OS::Cinder::Volume
