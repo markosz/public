@@ -48,9 +48,9 @@ resources:
       image: { get_param: image }
       flavor: { get_param: flavor }
       networks: [{network: {get_param: network} }]
-      cloud_config: |
+      user_data: |
         #cloud-config
-        passwd: stack
+        password: stack
         chpasswd: { expire: False }
         ssh_pwauth: True
 
