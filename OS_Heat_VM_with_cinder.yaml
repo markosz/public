@@ -48,7 +48,6 @@ resources:
       image: { get_param: image }
       flavor: { get_param: flavor }
       networks: [{network: {get_param: network} }]
-      user_data_format: RAW
       user_data: |
         #cloud-config
         passwd: stack
