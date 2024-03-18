@@ -51,7 +51,7 @@ resources:
       user_data_format: RAW
       user_data: |
         #cloud-config
-        passwwd: stack
+        passwd: stack
         chpasswd: { expire: False }
         ssh_pwauth: True
 
