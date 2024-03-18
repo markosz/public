@@ -56,8 +56,8 @@ resources:
     properties:
       cloud_config:
         password:stack
-        chpasswd: { expire: False }
-        ssh_pwauth: True
+        chpasswd:{expire:False}
+        ssh_pwauth:True
 
 
   my_vol:
