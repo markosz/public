@@ -55,7 +55,7 @@ resources:
     type: OS::Heat::CloudConfig
     properties:
       cloud_config:
-        password: stack
+        password:stack
         chpasswd: { expire: False }
         ssh_pwauth: True
 
