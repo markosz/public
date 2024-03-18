@@ -51,9 +51,8 @@ resources:
       user_data_format: RAW
       user_data: |
         #cloud-config
-        chpasswd:
-          fedora:stack
-        expire: False
+        passwwd: stack
+        chpasswd: { expire: False }
         ssh_pwauth: True
 
   my_vol:
