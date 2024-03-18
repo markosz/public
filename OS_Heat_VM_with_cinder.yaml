@@ -49,7 +49,8 @@ resources:
       flavor: { get_param: flavor }
       networks: [{network: {get_param: network} }]
       user_data: |
-        password: stack
+        #cloud-config
+        password:stack
         chpasswd: { expire: False }
         ssh_pwauth: True
 
